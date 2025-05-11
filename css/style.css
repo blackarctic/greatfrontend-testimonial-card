@@ -9,9 +9,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
+  padding: 24px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
 }
 
 * {
@@ -23,6 +23,7 @@ body {
   position: fixed;
   bottom: 24px;
   left: 24px;
+  padding: 8px;
   font-size: 11px;
   text-align: center;
 }

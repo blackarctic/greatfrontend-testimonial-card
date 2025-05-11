@@ -14,36 +14,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <script src="js/testimonial-card.js"></script>
   </head>
   <body>
-    <div
-      class="flex flex-col gap-4 bg-white rounded-lg p-8 shadow-md w-[320px] mt-[200px]"
-    >
-      <div class="flex gap-4">
-        <img
-          class="object-center object-cover rounded-full w-[48px] h-[48px]"
-          src="/img/profile-thumbnail.png"
-          alt="Profile image"
-        />
-        <div class="flex flex-col">
-          <div class="text-lg text-neutral-900" aria-label="User name">
-            Sarah Dole
-          </div>
-          <div class="text-sm text-neutral-600" aria-label="User handle">
-            @sarahdole
-          </div>
-        </div>
-      </div>
-      <div class="text-base text-neutral-600" aria-label="testimonial content">
-        <p>
-          I've been searching for high-quality abstract images for my design
-          projects, and I'm thrilled to have found this platform. The variety
-          and depth of creativity are astounding!
-        </p>
-      </div>
-    </div>
+    <section class="flex gap-6 mt-[200px] flex-wrap size-fit">
+      <testimonial-card
+        name="Sarah Dole"
+        handle="sarahdole"
+        profile-image-url="/img/profile-thumbnail.png"
+        content="I've been searching for high-quality abstract images for my design
+      projects, and I'm thrilled to have found this platform. The variety
+      and depth of creativity are astounding!"
+      ></testimonial-card>
+      <testimonial-card
+        name="Lena Driftwood"
+        handle="DriftingLena"
+        profile-image-url="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        content="From start to finish, everything was smooth and hassle-free. I couldn't be happier with the results—highly recommend to anyone!"
+      ></testimonial-card>
+      <testimonial-card
+        name="Quinn Halbrooke"
+        handle="quinn_halbrooke"
+        profile-image-url="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        content="I've tried several services before, but this one exceeded all my expectations. The attention to detail and support were phenomenal!"
+      ></testimonial-card>
+    </section>
 
-    <div class="credits" data-gfe-screenshot-exclude="true">
+    <div class="credits bg-white" data-gfe-screenshot-exclude="true">
       A challenge by
       <a
         href="https://www.greatfrontend.com/projects?ref=challenges"
@@ -56,6 +53,5 @@
         >Nick Galloway</a
       >.
     </div>
-    <script src="js/index.js"></script>
   </body>
 </html>
