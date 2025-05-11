@@ -1,3 +1,15 @@
+const resolveProfileImageUrl = (profileImageUrl) => {
+  if (profileImageUrl.startsWith("/")) {
+    let pathnamePrefix = window.location.pathname;
+    if (pathnamePrefix.endsWith("/")) {
+      pathnamePrefix = pathnamePrefix.slice(0, -1);
+    }
+    profileImageUrl = `${pathnamePrefix}${profileImageUrl}`;
+  }
+
+  return profileImageUrl;
+};
+
 class TestimonialCard extends HTMLElement {
   static get observedAttributes() {
     return ["name", "handle", "content", "profile-image-url"];
@@ -15,7 +27,9 @@ class TestimonialCard extends HTMLElement {
     const name = this.getAttribute("name") || "";
     const handle = this.getAttribute("handle") || "";
     const content = this.getAttribute("content") || "";
-    const profileImageUrl = this.getAttribute("profile-image-url") || "";
+    const profileImageUrl = resolveProfileImageUrl(
+      this.getAttribute("profile-image-url") || ""
+    );
 
     this.innerHTML = `
       <div
